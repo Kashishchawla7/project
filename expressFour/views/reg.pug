@@ -1,0 +1,25 @@
+extends layout 
+
+block content 
+    form(action='/submit',method="post")
+        .form-group
+            label(for='name') Name:
+            input#name.form-control(type='text' placeholder='Enter name' name='name')
+            //- input.form-control(type='text',placeholder='Enter Name',name="name")
+        .form-group
+            label(for='number') Number:
+            input#number.form-control(type='number' placeholder='Enter number' name='number')
+            //- input.form-control(type='text',placeholder='Enter number',name="no")  
+        .form-group
+            label(for='email') Email:
+            input#email.form-control(type='email' placeholder='Enter email' name='email')
+            //- input.form-control(type='email',placeholder='Enter email',name='email')  
+        .form-group        
+            label(for='password') Password:
+            input#password.form-control(type='password' placeholder='Enter password' name='password')
+            <input type="checkbox" onclick="show()" />show password<br />
+            input(type='checkbox')         
+            label Remember Me
+        button.btn.btn-primary.btn-block(type='submit') Submit Registration 
+    a(href="/view")
+        button.btn.btn-primary.info.btn-block(type='button')  View Data

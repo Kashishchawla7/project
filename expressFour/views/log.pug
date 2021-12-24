@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+    form(action='/login',method="post")
+        .form-group
+            label(for='name') Name:
+            input#name.form-control(type='text' placeholder='Enter name' name='name')
+            //- input.form-control(type='text',placeholder='Enter Name',name="name")
+        
+        .form-group        
+            label(for='password') Password:
+            input#password.form-control(type='password' placeholder='Enter password' name='password')
+            input(type='checkbox')         
+            label Remember Me
+        button.btn.btn-primary.btn-block(type='submit') Submit Registration 
+    

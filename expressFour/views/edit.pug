@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .main.container
+        .row
+            form(method="post",action="/editdetails")
+                .form
+                    label(for="name") Name 
+                    input#name.form-control(type="text", readonly, value=result[0].name,placeholder="Enter Name",name='name')
+                .form
+                    label(for="email") Email
+                    input#email.form-control(type="email",  value=result[0].email,placeholder="Enter Email",name='email')
+                .form 
+                    label(for="number") Number 
+                    input#number.form-control(type="text", value=result[0].number g  bg, placeholder="Enter Number",name='no')

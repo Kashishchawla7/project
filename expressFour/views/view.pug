@@ -1,0 +1,28 @@
+extends layout 
+
+block content 
+    table.table.table-hover
+        tr 
+            th Name 
+            th Email 
+            th Number 
+            th Date
+            th Password
+            th Edit 
+            th Delete
+        each vr in result 
+            tr 
+                td  
+                    p=vr.name
+                td  
+                    p=vr.email
+                td 
+                    p=vr.number
+                td 
+                    p=vr.created_date
+                td
+                    p=vr.password
+                td 
+                    a(href="/edit?id="+vr._id) Edit 
+                td 
+                    a(href="/delete?id="+vr._id) Delete  
